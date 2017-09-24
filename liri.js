@@ -93,6 +93,10 @@ if(command == "my-tweets") {
     console.log("Woohoo, movie-this!");
     choice = process.argv[3];    
 
+    if (typeof choice == "undefined") {
+        choice = "Mr. Nobody"
+    }
+
     request("http://www.omdbapi.com/?t=" + choice + "&plot=short&apikey=40e9cece", function(error, response, body) {
         
           if (error) {
