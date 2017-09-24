@@ -53,7 +53,11 @@ if(command == "my-tweets") {
 
 } else if (command == "spotify-this-song") {
 
-    choice = process.argv[3].toLowerCase();
+    choice = process.argv[3];
+
+    if (typeof choice == "undefined") {
+        choice = "The Sign"
+    }
 
 //User Authentification for Spotify
 
