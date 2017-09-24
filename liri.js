@@ -135,8 +135,18 @@ if(command == "my-tweets") {
 } else if (command == "do-what-it-says") {
     console.log("This logs do-what-it-says");
 
-    var contents = fs.readFileSync("./random.txt", "UTF-8");
-    console.log(contents);
+    var contents = fs.readFile("./random.txt", "UTF-8", function(err, contents) {
+
+        if (err) {
+            console.log(err);
+        }
+        command = contents.substr(0, contents.indexOf(","));
+        choice = contents.substr(contents.indexOf(",")).replace(",", "");
+        console.log(contents);   
+        console.log(`Command: ${command}
+        Choice: ${choice}`);
+
+    });
 
 } else {
     console.log(`Not a valid command. Please use one of the following:
