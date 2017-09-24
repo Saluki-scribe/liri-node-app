@@ -90,7 +90,6 @@ if(command == "my-tweets") {
 
 } else if (command == "movie-this") {
     
-    console.log("Woohoo, movie-this!");
     choice = process.argv[3];    
 
     if (typeof choice == "undefined") {
