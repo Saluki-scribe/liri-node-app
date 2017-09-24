@@ -29,12 +29,6 @@ var spotifySecret = spotifyKeys.client_secret;
 var command = process.argv[2].toLowerCase();
 var choice = 0;
 
-
-
-
-
-
-
 //COMMAND LOGIC
 
 if(command == "my-tweets") {
