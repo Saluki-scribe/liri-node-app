@@ -8,6 +8,8 @@ var consumerKey = twitterKeys.consumer_key;
 var command = process.argv[2].toLowerCase();
 console.log(command);
 
+//Command logic
+
 if(command == "my-tweets") {
 
     console.log("my-tweets are awesome!");
@@ -29,4 +31,5 @@ if(command == "my-tweets") {
     spotify-this-song
     movie-this
     do-what-it-says`);
-}
+
+}; //End if-else statement for commands
