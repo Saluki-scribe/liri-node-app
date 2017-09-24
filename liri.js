@@ -102,8 +102,16 @@ if(command == "my-tweets") {
           if (response.statusCode === 200) {
             var JSONBody = JSON.parse(body);
             console.log(JSONBody);
-            console.log("The movie's rating is: " + JSONBody.imdbRating);
-            console.log("The movie's number of votes  is: " + JSONBody.imdbVotes);
+            console.log(`
+            Title: ${JSONBody.Title}
+            Release Year: ${JSONBody.Released}
+            IMDB Rating: ${JSONBody.imdbRating}
+            Rotten Tomatoes Rating: ${JSONBody.Ratings[1].Value}
+            Country Produced In: ${JSONBody.Country}
+            Language: ${JSONBody.Language}
+            Plot: ${JSONBody.Plot}
+            Actors: ${JSONBody.Actors}
+            `);
           }
         });
 
