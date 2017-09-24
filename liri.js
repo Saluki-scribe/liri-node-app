@@ -1,19 +1,26 @@
+//Include required modules
+
 const request = require("request");
 const util = require("util");
+const fs = require("fs");
+var twitter = require("twitter");
+var Spotify = require("node-spotify-api");
 var Keys = require("./keys");
+
+//Pull authentication Keys from objects
+
 var twitterKeys = Keys.twitterKeys;
 var spotifyKeys = Keys.spotifyKeys;
 
-var twitter = require("twitter");
-var Spotify = require("node-spotify-api");
-
 //Twitter Key Variables
+
 var consumerKey = twitterKeys.consumer_key;
 var consumerSecret = twitterKeys.consumer_secret;
 var accessTokenKey = twitterKeys.access_token_key;
 var accessTokenSecret = twitterKeys.access_token_secret;
 
-//Spotify Keys
+//Spotify Key Variables
+
 var spotifyId = spotifyKeys.client_id;
 var spotifySecret = spotifyKeys.client_secret;
 
@@ -22,11 +29,11 @@ var spotifySecret = spotifyKeys.client_secret;
 var command = process.argv[2].toLowerCase();
 var choice = 0;
 
-//Command logic
+//COMMAND LOGIC
 
 if(command == "my-tweets") {
 
-//User authentification for Twitter
+//User authentication object for Twitter
 
     var twitter = new twitter({
         consumer_key: consumerKey,
@@ -46,14 +53,15 @@ if(command == "my-tweets") {
         if (response.statusCode === 200){
             for (var i = 0; i < tweets.length; i++) {
                 console.log(`\n${tweets[i].created_at}:  ${tweets[i].text}\n`);
-            }
-            
-        }
+            } 
+        };
       });
 
 } else if (command == "spotify-this-song") {
 
     choice = process.argv[3];
+
+//Set "The Sign" as default search if user doesn't type a song
 
     if (typeof choice == "undefined") {
         choice = "The Sign"
@@ -96,6 +104,8 @@ if(command == "my-tweets") {
     
     choice = process.argv[3];    
 
+//Set "Mr. Nobody" as default search if user doesn't type a song
+
     if (typeof choice == "undefined") {
         choice = "Mr. Nobody"
     }
@@ -105,7 +115,7 @@ if(command == "my-tweets") {
           if (error) {
             throw error;
           }
-          // If the request is successful (i.e. if the response status code is 200)
+        // If the request is successful (i.e. if the response status code is 200)
           if (response.statusCode === 200) {
             var JSONBody = JSON.parse(body);
             console.log(JSONBody);
@@ -122,9 +132,12 @@ if(command == "my-tweets") {
           }
         });
 
-
 } else if (command == "do-what-it-says") {
     console.log("This logs do-what-it-says");
+
+    var contents = fs.readFileSync("./random.txt", "UTF-8");
+    console.log(contents);
+
 } else {
     console.log(`Not a valid command. Please use one of the following:
     
