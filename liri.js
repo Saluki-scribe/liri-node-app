@@ -91,6 +91,22 @@ if(command == "my-tweets") {
 } else if (command == "movie-this") {
     
     console.log("Woohoo, movie-this!");
+    choice = process.argv[3];    
+
+    request("http://www.omdbapi.com/?t=" + choice + "&plot=short&apikey=40e9cece", function(error, response, body) {
+        
+          if (error) {
+            throw error;
+          }
+          // If the request is successful (i.e. if the response status code is 200)
+          if (response.statusCode === 200) {
+            var JSONBody = JSON.parse(body);
+            console.log(JSONBody);
+            console.log("The movie's rating is: " + JSONBody.imdbRating);
+            console.log("The movie's number of votes  is: " + JSONBody.imdbVotes);
+          }
+        });
+
 
 } else if (command == "do-what-it-says") {
     console.log("This logs do-what-it-says");
