@@ -1,4 +1,9 @@
+var request = require("request");
 var twitterKeys = require("./keys");
+var spotifyKeys = require("./keys");
+
+var twitter = require("twitter");
+var Spotify = require("node-spotify-api");
 
 //Twitter Keys
 var consumerKey = twitterKeys.consumer_key;
@@ -6,9 +11,15 @@ var consumerSecret = twitterKeys.consumer_secret;
 var accessTokenKey = twitterKeys.access_token_key;
 var accessTokenSecret = twitterKeys.access_token_secret;
 
+//Spotify Keys
+var spotifyId = spotifyKeys.client_id;
+var spotifySecret = spotifyKeys.client_secret;
+
 //Liri Commands
 
 var command = process.argv[2].toLowerCase();
+var choice = process.argv[3].toLowerCase();
+
 console.log(command);
 
 //Command logic
@@ -20,6 +31,24 @@ if(command == "my-tweets") {
 } else if (command == "spotify-this-song") {
 
     console.log("Woooo, Spotify!");
+
+    var spotify = new Spotify({
+        id: spotifyId,
+        secret: spotifySecret
+      });
+
+    spotify.search({ type: 'track', query: choice }, function(err, data) {
+        if (err) {
+          return console.log('Error occurred: ' + err);
+        }
+       
+      console.log(data); 
+      console.log(data.tracks.items);
+      var album = data.tracks.items[1].album.name;
+      //console.log(data.tracks.items);       
+      
+      
+    });
 
 } else if (command == "movie-this") {
     
