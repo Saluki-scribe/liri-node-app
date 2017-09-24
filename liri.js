@@ -98,8 +98,8 @@ if(command == "my-tweets") {
     console.log(`Not a valid command. Please use one of the following:
     
     my-tweets
-    spotify-this-song
-    movie-this
+    spotify-this-song "<song name>"
+    movie-this "<movie name>"
     do-what-it-says`);
 
 }; //End if-else statement for commands
