@@ -1,4 +1,5 @@
-var request = require("request");
+const request = require("request");
+const util = require("util");
 var twitterKeys = require("./keys");
 var spotifyKeys = require("./keys");
 
@@ -42,12 +43,19 @@ if(command == "my-tweets") {
           return console.log('Error occurred: ' + err);
         }
        
-      console.log(data); 
       console.log(data.tracks.items);
+      var artists = data.tracks.items[1].album.artists[0].name;
+      var song = choice;
+      var songPreview = data.tracks.items[1];
       var album = data.tracks.items[1].album.name;
       //console.log(data.tracks.items);       
       
-      
+      console.log(`
+      Artists: ${artists}
+      Song Name: ${song}
+      Song Preview: ${songPreview}
+      Album: ${album}`);      
+
     });
 
 } else if (command == "movie-this") {
