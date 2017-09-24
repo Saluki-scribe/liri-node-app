@@ -1,9 +1,10 @@
 const request = require("request");
 const util = require("util");
-var twitterKeys = require("./keys");
-var spotifyKeys = require("./keys");
+var Keys = require("./keys");
+var twitterKeys = Keys.twitterKeys;
+var spotifyKeys = Keys.spotifyKeys;
 
-var Twitter = require("twitter");
+var twitter = require("twitter");
 var Spotify = require("node-spotify-api");
 
 //Twitter Key Variables
@@ -12,6 +13,8 @@ var consumerSecret = twitterKeys.consumer_secret;
 var accessTokenKey = twitterKeys.access_token_key;
 var accessTokenSecret = twitterKeys.access_token_secret;
 
+console.log(twitterKeys);
+
 //Spotify Keys
 var spotifyId = spotifyKeys.client_id;
 var spotifySecret = spotifyKeys.client_secret;
@@ -19,7 +22,7 @@ var spotifySecret = spotifyKeys.client_secret;
 //Liri Commands
 
 var command = process.argv[2].toLowerCase();
-var choice = process.argv[3].toLowerCase();
+var choice = 0;
 
 console.log(command);
 
@@ -29,14 +32,49 @@ if(command == "my-tweets") {
 
     console.log("my-tweets are awesome!");
 
+//User authentification for Twitter
+
+    var twitter = new twitter({
+        consumer_key: consumerKey,
+        consumer_secret: consumerSecret,
+        access_token_key: accessTokenKey,
+        access_token_secret: accessTokenSecret
+      });
+      
+//Search Twitter API and return recent tweets
+
+      var params = {screen_name: '@saluki_scribe'};
+      twitter.get('statuses/user_timeline', params, function(error, tweets, response) {
+        if (error) {
+        console.log("Error!");
+          console.log(error);
+        }
+        
+        if (response.statusCode === 200){
+            console.log("No error!");
+            //var JSONTweets = JSON.parse(tweets);
+            for (var i = 0; i < tweets.length; i++) {
+                console.log(`\n${tweets[i].created_at}:  ${tweets[i].text}\n`);
+            }
+            
+        }
+      });
+
 } else if (command == "spotify-this-song") {
+
+    choice = process.argv[3].toLowerCase();
+
+//User Authentification for Spotify
 
     var spotify = new Spotify({
         id: spotifyId,
         secret: spotifySecret
       });
 
+//Search Spotify API and return requested data
+
     spotify.search({ type: 'track', query: choice }, function(err, data) {
+        
         if (err) {
           return console.log('Error occurred: ' + err);
         } else {
