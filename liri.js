@@ -3,10 +3,10 @@ const util = require("util");
 var twitterKeys = require("./keys");
 var spotifyKeys = require("./keys");
 
-var twitter = require("twitter");
+var Twitter = require("twitter");
 var Spotify = require("node-spotify-api");
 
-//Twitter Keys
+//Twitter Key Variables
 var consumerKey = twitterKeys.consumer_key;
 var consumerSecret = twitterKeys.consumer_secret;
 var accessTokenKey = twitterKeys.access_token_key;
@@ -31,8 +31,6 @@ if(command == "my-tweets") {
 
 } else if (command == "spotify-this-song") {
 
-    console.log("Woooo, Spotify!");
-
     var spotify = new Spotify({
         id: spotifyId,
         secret: spotifySecret
@@ -41,23 +39,25 @@ if(command == "my-tweets") {
     spotify.search({ type: 'track', query: choice }, function(err, data) {
         if (err) {
           return console.log('Error occurred: ' + err);
-        }
-       
-      console.log("\n\n\n\n")
-      console.log(data.tracks.items);
-      var artists = data.tracks.items[1].album.artists[0].name;
-      var song = choice;
-      var songPreview = data.tracks.items[1].preview_url;
-      var album = data.tracks.items[1].album.name;
-      //console.log(data.tracks.items);       
-      
-      console.log(`
-      Artists: ${artists}
-      Song Name: ${song}
-      Song Preview: ${songPreview}
-      Album: ${album}`);      
+        } else {
 
-    });
+        //Set variables for retrieving info from the data object 
+
+            var artists = data.tracks.items[0].album.artists[0].name;
+            var song = choice;
+            var songPreview = data.tracks.items[0].preview_url;
+            var album = data.tracks.items[0].album.name;
+            
+        //Display chosen song info
+      
+            console.log(`
+            Artists: ${artists}
+            Song Name: ${song}
+            Song Preview: ${songPreview}
+            Album: ${album}`);      
+
+        } 
+    }); //End Spotify search function 
 
 } else if (command == "movie-this") {
     
