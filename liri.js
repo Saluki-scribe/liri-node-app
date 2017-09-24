@@ -1,0 +1,32 @@
+var twitterKeys = require("./keys");
+
+//Twitter Keys
+var consumerKey = twitterKeys.consumer_key;
+
+//Liri Commands
+
+var command = process.argv[2].toLowerCase();
+console.log(command);
+
+if(command == "my-tweets") {
+
+    console.log("my-tweets are awesome!");
+
+} else if (command == "spotify-this-song") {
+
+    console.log("Woooo, Spotify!");
+
+} else if (command == "movie-this") {
+    
+    console.log("Woohoo, movie-this!");
+
+} else if (command == "do-what-it-says") {
+    console.log("This logs do-what-it-says");
+} else {
+    console.log(`Not a valid command. Please use one of the following:
+    
+    my-tweets
+    spotify-this-song
+    movie-this
+    do-what-it-says`);
+}
