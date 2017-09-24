@@ -13,8 +13,6 @@ var consumerSecret = twitterKeys.consumer_secret;
 var accessTokenKey = twitterKeys.access_token_key;
 var accessTokenSecret = twitterKeys.access_token_secret;
 
-console.log(twitterKeys);
-
 //Spotify Keys
 var spotifyId = spotifyKeys.client_id;
 var spotifySecret = spotifyKeys.client_secret;
@@ -24,13 +22,9 @@ var spotifySecret = spotifyKeys.client_secret;
 var command = process.argv[2].toLowerCase();
 var choice = 0;
 
-console.log(command);
-
 //Command logic
 
 if(command == "my-tweets") {
-
-    console.log("my-tweets are awesome!");
 
 //User authentification for Twitter
 
@@ -46,13 +40,10 @@ if(command == "my-tweets") {
       var params = {screen_name: '@saluki_scribe'};
       twitter.get('statuses/user_timeline', params, function(error, tweets, response) {
         if (error) {
-        console.log("Error!");
-          console.log(error);
+          console.log("error: " + error);
         }
         
         if (response.statusCode === 200){
-            console.log("No error!");
-            //var JSONTweets = JSON.parse(tweets);
             for (var i = 0; i < tweets.length; i++) {
                 console.log(`\n${tweets[i].created_at}:  ${tweets[i].text}\n`);
             }
