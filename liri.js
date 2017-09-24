@@ -29,6 +29,12 @@ var spotifySecret = spotifyKeys.client_secret;
 var command = process.argv[2].toLowerCase();
 var choice = 0;
 
+
+
+
+
+
+
 //COMMAND LOGIC
 
 if(command == "my-tweets") {
@@ -140,6 +146,7 @@ if(command == "my-tweets") {
         if (err) {
             console.log(err);
         }
+
         command = contents.substr(0, contents.indexOf(","));
         choice = contents.substr(contents.indexOf(",")).replace(",", "");
         console.log(contents);   
