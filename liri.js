@@ -43,10 +43,11 @@ if(command == "my-tweets") {
           return console.log('Error occurred: ' + err);
         }
        
+      console.log("\n\n\n\n")
       console.log(data.tracks.items);
       var artists = data.tracks.items[1].album.artists[0].name;
       var song = choice;
-      var songPreview = data.tracks.items[1];
+      var songPreview = data.tracks.items[1].preview_url;
       var album = data.tracks.items[1].album.name;
       //console.log(data.tracks.items);       
       
