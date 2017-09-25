@@ -105,7 +105,15 @@ function spotifyIt(choice) {
             Artists: ${artists}
             Song Name: ${song}
             Song Preview: ${songPreview}
-            Album: ${album}`);      
+            Album: ${album}`);     
+        
+        //Append data to log.txt
+
+            fs.appendFile("log.txt", `
+            Artists: ${artists}
+            Song Name: ${song}
+            Song Preview: ${songPreview}
+            Album: ${album}`)
 
         } 
     }); //End Spotify search function 
@@ -167,7 +175,7 @@ if(command == "my-tweets") {
     movieIt(choice);
 
 } else if (command == "do-what-it-says") {
-    
+
     fs.appendFile("log.txt", `\nCommand: ${command}______________\n`);    
     var contents = fs.readFile("./random.txt", "UTF-8", function(err, contents) {
 

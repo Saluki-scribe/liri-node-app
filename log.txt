@@ -4,3 +4,10 @@ Command: spotify-this-song______________
 Command: movie-this______________
 
 Command: do-what-it-says______________
+
+Command: spotify-this-song______________
+
+            Artists: Jonathan Coulton
+            Song Name: Re: Your Brains
+            Song Preview: https://p.scdn.co/mp3-preview/b5c4f85aed0335cb43eac0fadb97e152c600c226?cid=c3971cbd461c42ac9cba95a5715e3d96
+            Album: JoCo Looks Back
