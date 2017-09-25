@@ -29,13 +29,13 @@ var spotifySecret = spotifyKeys.client_secret;
 var command = process.argv[2].toLowerCase();
 var choice = 0;
 
-//COMMAND LOGIC
+//COMMAND FUNCTIONS
 
-if(command == "my-tweets") {
-
+function tweetIt () {
+    console.log("You called the twitter function");
 //User authentication object for Twitter
 
-    var twitter = new twitter({
+    twitter = new twitter({
         consumer_key: consumerKey,
         consumer_secret: consumerSecret,
         access_token_key: accessTokenKey,
@@ -53,9 +53,21 @@ if(command == "my-tweets") {
         if (response.statusCode === 200){
             for (var i = 0; i < tweets.length; i++) {
                 console.log(`\n${tweets[i].created_at}:  ${tweets[i].text}\n`);
-            } 
+            }
         };
       });
+}; //End Twitter Function
+
+
+
+
+
+
+//COMMAND LOGIC
+
+if(command == "my-tweets") {
+    //console.log("my-tweets was called");
+    tweetIt();
 
 } else if (command == "spotify-this-song") {
 
