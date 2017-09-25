@@ -31,9 +31,12 @@ var choice = 0;
 
 //COMMAND FUNCTIONS
 
+//*****my-tweets Calls This Function*****
+
 function tweetIt () {
     console.log("You called the twitter function");
-//User authentication object for Twitter
+
+    //User authentication object for Twitter
 
     twitter = new twitter({
         consumer_key: consumerKey,
@@ -59,19 +62,11 @@ function tweetIt () {
 }; //End Twitter Function
 
 
+//*****spotify-this-song Calls This Function*****
 
+function spotifyIt() {
 
-
-
-//COMMAND LOGIC
-
-if(command == "my-tweets") {
-    //console.log("my-tweets was called");
-    tweetIt();
-
-} else if (command == "spotify-this-song") {
-
-    choice = process.argv[3];
+ choice = process.argv[3];
 
 //Set "The Sign" as default search if user doesn't type a song
 
@@ -111,8 +106,12 @@ if(command == "my-tweets") {
 
         } 
     }); //End Spotify search function 
+}; // End SpotifyIt function
 
-} else if (command == "movie-this") {
+
+//*****movie-this Calls This Function*****
+
+function movieIt() {
     
     choice = process.argv[3];    
 
@@ -142,7 +141,22 @@ if(command == "my-tweets") {
             Actors: ${JSONBody.Actors}
             `);
           }
-        });
+        }); //End OMDB search function
+}; //End movieIt function
+
+//COMMAND LOGIC
+
+if(command == "my-tweets") {
+
+    tweetIt();
+
+} else if (command == "spotify-this-song") {
+
+    spotifyIt();
+
+} else if (command == "movie-this") {
+    
+   movieIt();
 
 } else if (command == "do-what-it-says") {
     console.log("This logs do-what-it-says");
