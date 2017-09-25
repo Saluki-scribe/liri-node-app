@@ -54,8 +54,9 @@ function tweetIt () {
         }
         
         if (response.statusCode === 200){
+            fs.appendFile("log.txt", `\nCommand: ${command}______________\n`);
             for (var i = 0; i < tweets.length; i++) {
-                console.log(`\n${tweets[i].created_at}:  ${tweets[i].text}\n`);
+                console.log(`\n${tweets[i].created_at}: ${tweets[i].text}\n`);
 
                 //Add tweets to log.txt
 
