@@ -64,9 +64,7 @@ function tweetIt () {
 
 //*****spotify-this-song Calls This Function*****
 
-function spotifyIt() {
-
- choice = process.argv[3];
+function spotifyIt(choice) {
 
 //Set "The Sign" as default search if user doesn't type a song
 
@@ -111,12 +109,10 @@ function spotifyIt() {
 
 //*****movie-this Calls This Function*****
 
-function movieIt() {
+function movieIt(choice) {
     
-    choice = process.argv[3];    
-
 //Set "Mr. Nobody" as default search if user doesn't type a song
-
+    console.log("Choice defined in movieIt function: " + choice);
     if (typeof choice == "undefined") {
         choice = "Mr. Nobody"
     }
@@ -151,12 +147,12 @@ if(command == "my-tweets") {
     tweetIt();
 
 } else if (command == "spotify-this-song") {
-
+    choice = process.argv[3];    
     spotifyIt();
 
 } else if (command == "movie-this") {
-    
-   movieIt();
+    choice = process.argv[3];        
+    movieIt();
 
 } else if (command == "do-what-it-says") {
     console.log("This logs do-what-it-says");
@@ -168,10 +164,24 @@ if(command == "my-tweets") {
         }
 
         command = contents.substr(0, contents.indexOf(","));
-        choice = contents.substr(contents.indexOf(",")).replace(",", "");
+        contentChoice = contents.substr(contents.indexOf(",")).replace(",", "");
         console.log(contents);   
         console.log(`Command: ${command}
-        Choice: ${choice}`);
+        Content Choice: ${contentChoice}`);
+
+        if(command == "my-tweets") {
+            
+                tweetIt();
+            
+            } else if (command == "spotify-this-song") {
+            
+                spotifyIt(contentChoice);
+            
+            } else if (command == "movie-this") {
+                
+               movieIt(contentChoice);
+            
+            }
 
     });
 
