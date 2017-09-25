@@ -56,7 +56,11 @@ function tweetIt () {
         if (response.statusCode === 200){
             for (var i = 0; i < tweets.length; i++) {
                 console.log(`\n${tweets[i].created_at}:  ${tweets[i].text}\n`);
-            }
+
+                //Add tweets to log.txt
+
+                fs.appendFile("log.txt", `\n${tweets[i].created_at}:  ${tweets[i].text}\n`);
+            }; //End for loop
         };
       });
 }; //End Twitter Function
@@ -127,7 +131,7 @@ function movieIt(choice) {
 
             console.log("Choice in movieIt function: " + choice);
             var JSONBody = JSON.parse(body);
-            console.log(JSONBody);
+            //console.log(JSONBody);
             console.log(`
             Title: ${JSONBody.Title}
             Release Year: ${JSONBody.Released}
