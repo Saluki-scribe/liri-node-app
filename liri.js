@@ -54,8 +54,9 @@ function tweetIt () {
         }
         
         if (response.statusCode === 200){
+            
             for (var i = 0; i < tweets.length; i++) {
-                console.log(`\n${tweets[i].created_at}:  ${tweets[i].text}\n`);
+                console.log(`\n${tweets[i].created_at}: ${tweets[i].text}\n`);
 
                 //Add tweets to log.txt
 
@@ -104,7 +105,15 @@ function spotifyIt(choice) {
             Artists: ${artists}
             Song Name: ${song}
             Song Preview: ${songPreview}
-            Album: ${album}`);      
+            Album: ${album}`);     
+        
+        //Append data to log.txt
+
+            fs.appendFile("log.txt", `
+            Artists: ${artists}
+            Song Name: ${song}
+            Song Preview: ${songPreview}
+            Album: ${album}`)
 
         } 
     }); //End Spotify search function 
@@ -142,6 +151,19 @@ function movieIt(choice) {
             Plot: ${JSONBody.Plot}
             Actors: ${JSONBody.Actors}
             `);
+
+        //Append movie data to log.txt
+
+            fs.appendFile("log.txt", `
+            Title: ${JSONBody.Title}
+            Release Year: ${JSONBody.Released}
+            IMDB Rating: ${JSONBody.imdbRating}
+            Rotten Tomatoes Rating: ${JSONBody.Ratings[1].Value}
+            Country Produced In: ${JSONBody.Country}
+            Language: ${JSONBody.Language}
+            Plot: ${JSONBody.Plot}
+            Actors: ${JSONBody.Actors}
+            `);
           }
         }); //End OMDB search function
 }; //End movieIt function
@@ -149,21 +171,25 @@ function movieIt(choice) {
 //COMMAND LOGIC
 
 if(command == "my-tweets") {
-
+    
+    fs.appendFile("log.txt", `\n\nCommand: ${command}______________\n`);    
     tweetIt();
 
 } else if (command == "spotify-this-song") {
+    
+    fs.appendFile("log.txt", `\n\nCommand: ${command}______________\n`);    
     choice = process.argv[3];    
     spotifyIt(choice);
 
 } else if (command == "movie-this") {
+    
+    fs.appendFile("log.txt", `\n\nCommand: ${command}______________\n`);    
     choice = process.argv[3];        
-    console.log("choice in movie-this else-if command: " + choice);
     movieIt(choice);
 
 } else if (command == "do-what-it-says") {
-    console.log("This logs do-what-it-says");
 
+    fs.appendFile("log.txt", `\n\nCommand: ${command}______________\n`);    
     var contents = fs.readFile("./random.txt", "UTF-8", function(err, contents) {
 
         if (err) {
