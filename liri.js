@@ -124,6 +124,8 @@ function movieIt(choice) {
           }
         // If the request is successful (i.e. if the response status code is 200)
           if (response.statusCode === 200) {
+
+            console.log("Choice in movieIt function: " + choice);
             var JSONBody = JSON.parse(body);
             console.log(JSONBody);
             console.log(`
@@ -148,11 +150,12 @@ if(command == "my-tweets") {
 
 } else if (command == "spotify-this-song") {
     choice = process.argv[3];    
-    spotifyIt();
+    spotifyIt(choice);
 
 } else if (command == "movie-this") {
     choice = process.argv[3];        
-    movieIt();
+    console.log("choice in movie-this else-if command: " + choice);
+    movieIt(choice);
 
 } else if (command == "do-what-it-says") {
     console.log("This logs do-what-it-says");
@@ -180,7 +183,7 @@ if(command == "my-tweets") {
             } else if (command == "movie-this") {
                 
                movieIt(contentChoice);
-            
+
             }
 
     });
