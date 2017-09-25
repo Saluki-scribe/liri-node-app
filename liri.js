@@ -172,24 +172,24 @@ function movieIt(choice) {
 
 if(command == "my-tweets") {
     
-    fs.appendFile("log.txt", `\nCommand: ${command}______________\n`);    
+    fs.appendFile("log.txt", `\n\nCommand: ${command}______________\n`);    
     tweetIt();
 
 } else if (command == "spotify-this-song") {
     
-    fs.appendFile("log.txt", `\nCommand: ${command}______________\n`);    
+    fs.appendFile("log.txt", `\n\nCommand: ${command}______________\n`);    
     choice = process.argv[3];    
     spotifyIt(choice);
 
 } else if (command == "movie-this") {
     
-    fs.appendFile("log.txt", `\nCommand: ${command}______________\n`);    
+    fs.appendFile("log.txt", `\n\nCommand: ${command}______________\n`);    
     choice = process.argv[3];        
     movieIt(choice);
 
 } else if (command == "do-what-it-says") {
 
-    fs.appendFile("log.txt", `\nCommand: ${command}______________\n`);    
+    fs.appendFile("log.txt", `\n\nCommand: ${command}______________\n`);    
     var contents = fs.readFile("./random.txt", "UTF-8", function(err, contents) {
 
         if (err) {
