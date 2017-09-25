@@ -151,6 +151,19 @@ function movieIt(choice) {
             Plot: ${JSONBody.Plot}
             Actors: ${JSONBody.Actors}
             `);
+
+        //Append movie data to log.txt
+
+            fs.appendFile("log.txt", `
+            Title: ${JSONBody.Title}
+            Release Year: ${JSONBody.Released}
+            IMDB Rating: ${JSONBody.imdbRating}
+            Rotten Tomatoes Rating: ${JSONBody.Ratings[1].Value}
+            Country Produced In: ${JSONBody.Country}
+            Language: ${JSONBody.Language}
+            Plot: ${JSONBody.Plot}
+            Actors: ${JSONBody.Actors}
+            `);
           }
         }); //End OMDB search function
 }; //End movieIt function
