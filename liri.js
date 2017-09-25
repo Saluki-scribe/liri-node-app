@@ -29,13 +29,16 @@ var spotifySecret = spotifyKeys.client_secret;
 var command = process.argv[2].toLowerCase();
 var choice = 0;
 
-//COMMAND LOGIC
+//COMMAND FUNCTIONS
 
-if(command == "my-tweets") {
+//*****my-tweets Calls This Function*****
 
-//User authentication object for Twitter
+function tweetIt () {
+    console.log("You called the twitter function");
 
-    var twitter = new twitter({
+    //User authentication object for Twitter
+
+    twitter = new twitter({
         consumer_key: consumerKey,
         consumer_secret: consumerSecret,
         access_token_key: accessTokenKey,
@@ -53,13 +56,17 @@ if(command == "my-tweets") {
         if (response.statusCode === 200){
             for (var i = 0; i < tweets.length; i++) {
                 console.log(`\n${tweets[i].created_at}:  ${tweets[i].text}\n`);
-            } 
+            }
         };
       });
+}; //End Twitter Function
 
-} else if (command == "spotify-this-song") {
 
-    choice = process.argv[3];
+//*****spotify-this-song Calls This Function*****
+
+function spotifyIt() {
+
+ choice = process.argv[3];
 
 //Set "The Sign" as default search if user doesn't type a song
 
@@ -99,8 +106,12 @@ if(command == "my-tweets") {
 
         } 
     }); //End Spotify search function 
+}; // End SpotifyIt function
 
-} else if (command == "movie-this") {
+
+//*****movie-this Calls This Function*****
+
+function movieIt() {
     
     choice = process.argv[3];    
 
@@ -130,7 +141,22 @@ if(command == "my-tweets") {
             Actors: ${JSONBody.Actors}
             `);
           }
-        });
+        }); //End OMDB search function
+}; //End movieIt function
+
+//COMMAND LOGIC
+
+if(command == "my-tweets") {
+
+    tweetIt();
+
+} else if (command == "spotify-this-song") {
+
+    spotifyIt();
+
+} else if (command == "movie-this") {
+    
+   movieIt();
 
 } else if (command == "do-what-it-says") {
     console.log("This logs do-what-it-says");
