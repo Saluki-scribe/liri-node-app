@@ -146,3 +146,108 @@ Command: spotify-this-song______________
             Song Name: Pretty Woman
             Song Preview: https://p.scdn.co/mp3-preview/05ef94f7c8a9eb170f5f67cac6274ff7df06c206?cid=c3971cbd461c42ac9cba95a5715e3d96
             Album: Oh, Pretty Woman
+
+Command: my-tweets______________
+
+Sun Sep 24 20:07:08 +0000 2017:  I just followed @WaltDisneyWorld. I freaking love Disney.
+
+Sat Sep 23 23:54:07 +0000 2017:  Wow. Hardly even looks like Earth. #Italy #travel https://t.co/zYP3Sdz2Gr
+
+Sun Sep 24 17:20:56 +0000 2017:  Stunning! https://t.co/lQqCXSEbLE
+
+Sat Sep 23 23:52:39 +0000 2017:  I never get tired of this commercial. https://t.co/MO9RhX3wb1 via @YouTube #afghanhound
+
+Sat Sep 23 23:51:06 +0000 2017:  So cute! https://t.co/ZQjALTX7Ht via @YouTube #saluki
+
+Sat Sep 23 23:49:47 +0000 2017:  I love Salukis! 
+https://t.co/HCJcUdnVSN
+
+Sat Sep 23 23:22:08 +0000 2017:  Salukis are my favs, but I love greyhounds. https://t.co/KSil1sqtEn #AdoptDontShop #greyhounds
+
+Sun Sep 24 20:06:18 +0000 2017:  Here's yet another tweet!
+
+Sat Sep 23 23:16:18 +0000 2017:  Pretty! https://t.co/8pxZAieUr8
+
+Sat Sep 23 23:14:00 +0000 2017:  There's no dog like a Saluki. https://t.co/jEty0MWsj0
+
+
+Command: spotify-this-song______________
+
+            Artists: Cradle Of Filth
+            Song Name: Nymphetamine
+            Song Preview: https://p.scdn.co/mp3-preview/842ddbf1f9508322162b3b2a078f8f34a5d78553?cid=c3971cbd461c42ac9cba95a5715e3d96
+            Album: Nymphetamine Special Edition
+
+Command: spotify-this-song______________
+
+            Artists: Harry Styles
+            Song Name: The Sign
+            Song Preview: https://p.scdn.co/mp3-preview/9801b9239ad1b833f1317574ee55b9d7b8426ff1?cid=c3971cbd461c42ac9cba95a5715e3d96
+            Album: Sign of the Times
+
+Command: movie-this______________
+
+            Title: Tangled
+            Release Year: 24 Nov 2010
+            IMDB Rating: 7.8
+            Rotten Tomatoes Rating: 89%
+            Country Produced In: USA
+            Language: English
+            Plot: The magically long-haired Rapunzel has spent her entire life in a tower, but now that a runaway thief has stumbled upon her, she is about to discover the world for the first time, and who she really is.
+            Actors: Mandy Moore, Zachary Levi, Donna Murphy, Ron Perlman
+            
+
+Command: movie-this______________
+
+            Title: Mr. Nobody
+            Release Year: 26 Sep 2013
+            IMDB Rating: 7.9
+            Rotten Tomatoes Rating: 64%
+            Country Produced In: Belgium, Germany, Canada, France, USA, UK
+            Language: English, Mohawk
+            Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+            Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+            
+
+Command: my-tweets______________
+
+Sun Sep 24 20:07:08 +0000 2017:  I just followed @WaltDisneyWorld. I freaking love Disney.
+
+Sun Sep 24 17:20:56 +0000 2017:  Stunning! https://t.co/lQqCXSEbLE
+
+Sat Sep 23 23:54:07 +0000 2017:  Wow. Hardly even looks like Earth. #Italy #travel https://t.co/zYP3Sdz2Gr
+
+Sat Sep 23 23:52:39 +0000 2017:  I never get tired of this commercial. https://t.co/MO9RhX3wb1 via @YouTube #afghanhound
+
+Sat Sep 23 23:51:06 +0000 2017:  So cute! https://t.co/ZQjALTX7Ht via @YouTube #saluki
+
+Sat Sep 23 23:49:47 +0000 2017:  I love Salukis! 
+https://t.co/HCJcUdnVSN
+
+Sat Sep 23 23:22:08 +0000 2017:  Salukis are my favs, but I love greyhounds. https://t.co/KSil1sqtEn #AdoptDontShop #greyhounds
+
+Sun Sep 24 20:06:18 +0000 2017:  Here's yet another tweet!
+
+Sat Sep 23 23:16:18 +0000 2017:  Pretty! https://t.co/8pxZAieUr8
+
+Sat Sep 23 23:14:00 +0000 2017:  There's no dog like a Saluki. https://t.co/jEty0MWsj0
+
+
+Command: movie-this______________
+
+            Title: Frozen
+            Release Year: 27 Nov 2013
+            IMDB Rating: 7.5
+            Rotten Tomatoes Rating: 89%
+            Country Produced In: USA
+            Language: English, Icelandic
+            Plot: When the newly crowned Queen Elsa accidentally uses her power to turn things into ice to curse her home in infinite winter, her sister, Anna, teams up with a mountain man, his playful reindeer, and a snowman to change the weather condition.
+            Actors: Kristen Bell, Idina Menzel, Jonathan Groff, Josh Gad
+            
+
+Command: spotify-this-song______________
+
+            Artists: Eurythmics
+            Song Name: Sweet Dreams
+            Song Preview: https://p.scdn.co/mp3-preview/90dbf17146e76483a9fe296d7f03001e2f07199f?cid=c3971cbd461c42ac9cba95a5715e3d96
+            Album: Sweet Dreams (Are Made Of This)
