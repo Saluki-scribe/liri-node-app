@@ -1,0 +1,83 @@
+Command: my-tweets______________
+
+Sun Sep 24 20:07:08 +0000 2017:  I just followed @WaltDisneyWorld. I freaking love Disney.
+
+Sun Sep 24 20:06:18 +0000 2017:  Here's yet another tweet!
+
+Sun Sep 24 17:20:56 +0000 2017:  Stunning! https://t.co/lQqCXSEbLE
+
+Sat Sep 23 23:52:39 +0000 2017:  I never get tired of this commercial. https://t.co/MO9RhX3wb1 via @YouTube #afghanhound
+
+Sat Sep 23 23:54:07 +0000 2017:  Wow. Hardly even looks like Earth. #Italy #travel https://t.co/zYP3Sdz2Gr
+
+Sat Sep 23 23:51:06 +0000 2017:  So cute! https://t.co/ZQjALTX7Ht via @YouTube #saluki
+
+Sat Sep 23 23:22:08 +0000 2017:  Salukis are my favs, but I love greyhounds. https://t.co/KSil1sqtEn #AdoptDontShop #greyhounds
+
+Sat Sep 23 23:49:47 +0000 2017:  I love Salukis! 
+https://t.co/HCJcUdnVSN
+
+Sat Sep 23 23:16:18 +0000 2017:  Pretty! https://t.co/8pxZAieUr8
+
+Sat Sep 23 23:14:00 +0000 2017:  There's no dog like a Saluki. https://t.co/jEty0MWsj0
+
+
+Command: spotify-this-song______________
+
+            Artists: Harry Styles
+            Song Name: The Sign
+            Song Preview: https://p.scdn.co/mp3-preview/9801b9239ad1b833f1317574ee55b9d7b8426ff1?cid=c3971cbd461c42ac9cba95a5715e3d96
+            Album: Sign of the Times
+
+Command: spotify-this-song______________
+
+            Artists: Jonathan Coulton
+            Song Name: Re: Your Brains
+            Song Preview: https://p.scdn.co/mp3-preview/b5c4f85aed0335cb43eac0fadb97e152c600c226?cid=c3971cbd461c42ac9cba95a5715e3d96
+            Album: JoCo Looks Back
+
+Command: movie-this______________
+
+            Title: Mr. Nobody
+            Release Year: 26 Sep 2013
+            IMDB Rating: 7.9
+            Rotten Tomatoes Rating: 64%
+            Country Produced In: Belgium, Germany, Canada, France, USA, UK
+            Language: English, Mohawk
+            Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+            Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+            
+
+Command: movie-this______________
+
+            Title: Rosemary's Baby
+            Release Year: 12 Jun 1968
+            IMDB Rating: 8.0
+            Rotten Tomatoes Rating: 99%
+            Country Produced In: USA
+            Language: English
+            Plot: A young couple move into an apartment, only to be surrounded by peculiar neighbors and occurrences. When the wife becomes mysteriously pregnant, paranoia over the safety of her unborn child begins to control her life.
+            Actors: Mia Farrow, John Cassavetes, Ruth Gordon, Sidney Blackmer
+            
+
+Command: do-what-it-says______________
+
+            Artists: Backstreet Boys
+            Song Name: "I Want it That Way"
+            Song Preview: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=c3971cbd461c42ac9cba95a5715e3d96
+            Album: The Hits--Chapter One
+
+
+            
+
+Command: movie-this______________
+
+            Title: Kill Bill: Vol. 1
+            Release Year: 10 Oct 2003
+            IMDB Rating: 8.1
+            Rotten Tomatoes Rating: 85%
+            Country Produced In: USA
+            Language: English, Japanese, French
+            Plot: The Bride wakens from a four-year coma. The child she carried in her womb is gone. Now she must wreak vengeance on the team of assassins who betrayed her - a team she was once part of.
+            Actors: Uma Thurman, Lucy Liu, Vivica A. Fox, Daryl Hannah
+            

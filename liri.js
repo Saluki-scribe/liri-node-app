@@ -125,7 +125,6 @@ function spotifyIt(choice) {
 function movieIt(choice) {
     
 //Set "Mr. Nobody" as default search if user doesn't type a song
-    console.log("Choice defined in movieIt function: " + choice);
     if (typeof choice == "undefined") {
         choice = "Mr. Nobody"
     }
@@ -138,7 +137,6 @@ function movieIt(choice) {
         // If the request is successful (i.e. if the response status code is 200)
           if (response.statusCode === 200) {
 
-            console.log("Choice in movieIt function: " + choice);
             var JSONBody = JSON.parse(body);
             //console.log(JSONBody);
             console.log(`
