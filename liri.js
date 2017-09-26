@@ -5,12 +5,8 @@ const util = require("util");
 const fs = require("fs");
 var twitter = require("twitter");
 var Spotify = require("node-spotify-api");
-var Keys = require("./keys");
-
-//Pull authentication Keys from objects
-
-var twitterKeys = Keys.twitterKeys;
-var spotifyKeys = Keys.spotifyKeys;
+var twitterKeys = require("./keys");
+var spotifyKeys = require("./spotify-keys.js");
 
 //Twitter Key Variables
 
