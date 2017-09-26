@@ -18,6 +18,6 @@
 
 <a href="https://cl.ly/0X0C2V1J131i" target="_blank"><img src="https://dr5mo5s7lqrtc.cloudfront.net/items/2P0B152Q0f1e2L2b1j0p/Screen%20recording%202017-09-25%20at%2007.36.11%20PM.gif" style="display: block;height: auto;width: 100%;"/></a>
 
-3. All commands and data outputted to the terminal append to the file log.txt
+3. All commands and data output to the terminal append to the file log.txt
 
 <a href="https://cl.ly/023M3P1o3j26" target="_blank"><img src="https://dr5mo5s7lqrtc.cloudfront.net/items/1d2g2e3d123P1N382u1Q/Screen%20recording%202017-09-25%20at%2007.44.18%20PM.gif" style="display: block;height: auto;width: 100%;"/></a>
