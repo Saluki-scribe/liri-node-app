@@ -56,7 +56,7 @@ typings/
 
 # dotenv environment variables file
 .env
-
+.vscode
 .DS_Store
 twitter-keys.js
 spotify-keys.js
