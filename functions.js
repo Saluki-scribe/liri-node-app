@@ -161,8 +161,6 @@ function movieIt(choice) {
         }); //End OMDB search function
 }; //End movieIt function
 
-
-
 module.exports = {
     tweetIt: tweetIt,
     spotifyIt: spotifyIt,

@@ -66,7 +66,6 @@ if(command == "my-tweets") {
                movieIt(contentChoice);
 
             }
-
     });
 
 } else {
