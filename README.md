@@ -1,6 +1,6 @@
 # liri-node-app
 
-**An app that takes in four different commands, outputs api data to the terminal, and logs that data to a file**
+**An app that takes in four different commands, outputs api data to the terminal, and logs that data to a txt file**
 
 1. 'my-tweets' and 'spotify-this-song'
 
@@ -16,7 +16,9 @@
 
 * 'do-what-it-says' reads the random.txt file, converts it into variables, and executes whatever command was written 
 
-<a href="https://cl.ly/0X0C2V1J131i" target="_blank"><img src="https://dr5mo5s7lqrtc.cloudfront.net/items/2P0B152Q0f1e2L2b1j0p/Screen%20recording%202017-09-25%20at%2007.36.11%20PM.gif" style="display: block;height: auto;width: 100%;"/></a>
+<figure class="video_container">
+  <iframe src="https://share.getcloudapp.com/RBuPOqDR?embed=true" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
 
 3. All commands and data output to the terminal append to the file log.txt
 
