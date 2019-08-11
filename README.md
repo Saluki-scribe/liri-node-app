@@ -8,7 +8,7 @@
 
 * 'spotify-this-song' shows a specified song's data in the terminal
 
-<a href="https://cl.ly/3A44451s3G2R" target="_blank"><img src="https://dr5mo5s7lqrtc.cloudfront.net/items/1V0D432z0r0T1x3Q2Y1D/Screen%20recording%202017-09-25%20at%2007.34.26%20PM.gif" style="display: block;height: auto;width: 100%;"/></a>
+<img src="https://f.v1.n0.cdn.getcloudapp.com/items/1V0D432z0r0T1x3Q2Y1D/Screen%20recording%202017-09-25%20at%2007.34.26%20PM.gif" class="mx-auto d-block img-fluid" alt="Screen recording 2017-09-25 at 07.34.26 PM">
 
 2. 'movie-this' and 'do-what-it-says
 
@@ -16,10 +16,8 @@
 
 * 'do-what-it-says' reads the random.txt file, converts it into variables, and executes whatever command was written 
 
-<figure class="video_container">
-  <iframe src="https://share.getcloudapp.com/RBuPOqDR?embed=true" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
+<img src="https://f.v1.n0.cdn.getcloudapp.com/items/2P0B152Q0f1e2L2b1j0p/Screen%20recording%202017-09-25%20at%2007.36.11%20PM.gif" class="mx-auto d-block img-fluid" alt="Screen recording 2017-09-25 at 07.36.11 PM">
 
 3. All commands and data output to the terminal append to the file log.txt
 
-<a href="https://cl.ly/023M3P1o3j26" target="_blank"><img src="https://dr5mo5s7lqrtc.cloudfront.net/items/1d2g2e3d123P1N382u1Q/Screen%20recording%202017-09-25%20at%2007.44.18%20PM.gif" style="display: block;height: auto;width: 100%;"/></a>
+<img src="https://f.v1.n0.cdn.getcloudapp.com/items/1d2g2e3d123P1N382u1Q/Screen%20recording%202017-09-25%20at%2007.44.18%20PM.gif" class="mx-auto d-block img-fluid" alt="Screen recording 2017-09-25 at 07.44.18 PM">
